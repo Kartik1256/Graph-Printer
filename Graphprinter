@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+
+float per1(int a, int b) {
+    return (float)b/a*100;
+}
+
+int main() {
+    while(1) {
+        int total;
+        int item;
+        
+        cout<<"Enter the total sales"<<endl;
+        cin>>total;
+        cout<<"Enter the sales of both item"<<endl;
+        cin>>item;
+        int quotient1 = per1(total, item);
+        int o = quotient1/10;
+        cout <<"Item1's sale:";
+        for(int i = 0; i<o; i++) {
+            cout<<"|";
+        }
+        cout<<per1(total, item) <<"%"<<endl;
+        float others = 100-quotient1;
+        cout<<"other's sale: "<<endl;
+        int quotient2 = others/10;
+        for(int i = 0; i<quotient2; i++) {
+            cout<<"|";
+        }
+        cout<<others<<"%"<<endl;
+    }
+    return 0;
+}
